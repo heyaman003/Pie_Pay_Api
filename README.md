@@ -1,6 +1,7 @@
-
-
 # PiePay Backend
+
+**[→ Submission Answers (ANSWER.md)](ANSWER.md)**  
+**[→ Flipkart Offer API Explanation (FLIPKART_OFFER_API.md)](FLIPKART_OFFER_API.md)**
 
 ## Visual Overview
 
@@ -81,4 +82,4 @@ GET /offer/highest-discount?amountToPay=10000&bankName=AXIS&paymentInstrument=CR
 
 ## Notes
 - If you want to add more offers, edit `prisma/seed.ts` and re-run the seed script.
-- For more details on the Flipkart offer API, see `FLIPKART_OFFER_API.md`.
+- For more details on the Flipkart offer API, see `FLIPKART_OFFER_API.md`. 
