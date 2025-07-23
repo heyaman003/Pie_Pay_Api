@@ -37,14 +37,6 @@
 
 ---
 
-## 2. Assumptions
-- The Flipkart offer API response structure is as shown in the provided example and images. If the real API differs, only the extraction logic in `OfferService` needs to be updated.
-- Offers are uniquely identified by a combination of title, description, bank, discount type/value, and validity.
-- Only the fields present in the example are required for discount calculation; additional fields (like min/max transaction) can be added if needed.
-- The backend is not exposed to the public internet in production without proper security (e.g., authentication, HTTPS).
-
----
-
 ## 3. Design Choices
 - **Framework:** Chose NestJS for its modularity, scalability, and TypeScript support.
 - **ORM:** Prisma for type safety, easy migrations, and developer experience.
