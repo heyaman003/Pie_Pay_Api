@@ -5,9 +5,7 @@ import { PrismaService } from '../prisma.service';
 export class OfferService {
   constructor(private prisma: PrismaService) {}
 
-  // Extract and store offers from Flipkart API response
   async createOffers(flipkartOfferApiResponse: any): Promise<{ noOfOffersIdentified: number; noOfNewOffersCreated: number }> {
-    // TODO: Adjust extraction logic based on actual Flipkart API structure
     const offers = this.extractOffers(flipkartOfferApiResponse);
     let noOfNewOffersCreated = 0;
     for (const offer of offers) {
@@ -15,15 +13,13 @@ export class OfferService {
         await this.prisma.offer.create({ data: offer });
         noOfNewOffersCreated++;
       } catch (e) {
-        // Unique constraint violation: skip duplicates
+        
       }
     }
     return { noOfOffersIdentified: offers.length, noOfNewOffersCreated };
   }
 
-  // Extract offers from Flipkart API response (adjust as needed)
   extractOffers(apiResponse: any) {
-    // Example: apiResponse.offers is an array
     if (!apiResponse.offers || !Array.isArray(apiResponse.offers)) return [];
     return apiResponse.offers.map((o: any) => ({
       title: o.title || '',
