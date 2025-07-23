@@ -44,7 +44,3 @@
 - **paymentInstruments**: Array of supported instruments (e.g., ["CREDIT"], ["EMI"])
 - **validity**: Validity period (string)
 
-## Tips
-- The actual field names may vary; always inspect the real API response.
-- Some offers may have additional fields (e.g., min transaction amount, max discount cap).
-- Adjust the backend extraction logic as needed to match the real Flipkart API structure. 
